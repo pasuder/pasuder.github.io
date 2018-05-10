@@ -44,16 +44,12 @@ description: List of my public repos
 
             <div class="content">
               <table>
-                {% for repo in site.github.public_repositories limit:28 %}
+                {% for repo in site.github.public_repositories %}
                   {% if repo.fork != true %}
                     <tr>
                       <td>
-                        <h3><a href="{{ repo.homepage }}">{{ repo.name }}</a></h3>
+                        <h3><a href="{{ repo.html_url }}">{{ repo.name }}</a></h3>
                         <p>{{ repo.description }}</p>
-                      </td>
-                      <td>
-                        <a class="button" href="{{ repo.html_url }}/archive/{{ repo.default_branch }}.zip">Download</a>
-                        <a class="button" href="{{ repo.html_url }}">Fork it</a>
                       </td>
                     </tr>
                   {% endif %}
