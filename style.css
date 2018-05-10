@@ -1,0 +1,162 @@
+@import url(//fonts.googleapis.com/css?family=Ubuntu&subset=latin,latin-ext);
+
+body {
+  font-family: 'Ubuntu', serif;
+  font-size: 17px;
+  background-color: white;
+  color: #424242;
+  margin: 0;
+  padding: 0;
+  border: 0;
+}
+
+img {
+  max-width: 100%;
+}
+
+hr {
+  border: 1px solid #B1B1B1;
+}
+
+.title {
+  padding: 20px 0;
+}
+
+.content {
+}
+
+.card {
+  margin: 10px 0 0 0;
+}
+
+/* -- document -- */
+
+div.document {
+  width: 940px;
+  margin: 30px auto 0 auto;
+}
+
+div.documentwrapper {
+  float: left;
+  width: 100%;
+}
+
+div.bodywrapper {
+  margin: 0 0 0 220px;
+}
+
+div.body {
+  padding: 0 30px 0 30px;
+}
+
+/* -- sidebar -- */
+
+div.sidebarwrapper {
+  padding: 18px 10px;
+}
+
+div.sidebar {
+  float: left;
+  width: 230px;
+  margin-left: -100%;
+  font-size: 14px;
+  line-height: 1.5;
+}
+
+div.sidebar ul {
+  list-style: none;
+}
+
+div.sidebar a {
+  color: #444;
+  text-decoration: none;
+  border-bottom: 1px dotted #999;
+}
+
+div.sidebar a:hover {
+  border-bottom: 1px solid #999;
+}
+
+div.sidebarwrapper p.logo {
+  padding: 0;
+  margin: 0;
+  text-align: center;
+}
+
+div.sidebar p.logo a,
+div.sidebar p.logo a:hover {
+  border: none;
+}
+
+div.sidebar p {
+  color: #555;
+  margin: 10px 0;
+}
+
+div.sidebar ul {
+  margin: 10px 0;
+  padding: 0;
+  color: #000;
+}
+
+@media screen and (max-width: 875px) {
+
+  body {
+    margin: 0;
+    padding: 20px 30px;
+  }
+
+  .bodywrapper {
+    margin: 0;
+  }
+
+  div.bodywrapper {
+    margin: 0;
+  }
+
+  div.body {
+    min-height: 0;
+    padding: 0;
+  }
+
+  .document {
+    width: auto;
+  }
+
+  div.documentwrapper {
+    float: none;
+    background: white;
+    margin: 0;
+  }
+
+  div.document {
+    width: 100%;
+    margin: 0;
+  }
+
+  div.sidebar {
+    display: block;
+    width: 100%;
+    margin: 0;
+    padding: 10px 20px;
+    background: #333;
+    color: #FFF;
+  }
+
+  div.sidebar p {
+    color: white;
+  }
+
+  div.sidebar a {
+    color: #AAA;
+  }
+
+  div.sidebar p.logo {
+    display: none;
+  }
+
+  ul {
+    margin-left: 0;
+  }
+
+}

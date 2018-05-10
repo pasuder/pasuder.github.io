@@ -1,0 +1,99 @@
+---
+title: pasuder's repos
+description: List of my public repos
+---
+<!doctype html>
+<html lang="en-GB">
+  <head>
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <meta name="description" content="Paweł Suder">
+    <meta name="author" content="Paweł Suder">
+
+    <title>pasuder's repo list</title>
+
+    <!-- Bootstrap core CSS -->
+    <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css" type="text/css"
+          integrity="sha384-rwoIResjU2yc3z8GV/NPeZWAv56rSmLldC3R/AZzGRnGxQQKnKkoFVhFQhNUwEyJ" crossorigin="anonymous">
+
+    <!-- Font Awesome CSS -->
+    <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" type="text/css"
+          integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+
+    <!-- Custom styles CSS -->
+    <link rel="stylesheet" href="./style.css" type="text/css"
+          media="all">
+
+  </head>
+
+  <body role="document">
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body container" role="main">
+
+            <div class="title">
+              <h1>List of pasuder's repo</h1>
+            </div>
+
+            <div class="content">
+              <table>
+                {% for repo in site.github.public_repositories limit:28 %}
+                  {% if repo.fork != true %}
+                    <tr>
+                      <td>
+                        <h3><a href="{{ repo.homepage }}">{{ repo.name }}</a></h3>
+                        <p>{{ repo.description }}</p>
+                      </td>
+                      <td>
+                        <a class="button" href="{{ repo.html_url }}/archive/{{ repo.default_branch }}.zip">Download</a>
+                        <a class="button" href="{{ repo.html_url }}">Fork it</a>
+                      </td>
+                    </tr>
+                  {% endif %}
+                {% endfor %}
+              </table>
+            </div>
+
+            <p style="font-size: 0.6em; text-align: right;">This website uses cookies | Ta strona używa ciasteczek</p>
+          </div>
+        </div>
+      </div>
+      <div class="sidebar">
+        <div class="sidebarwrapper">
+          <p class="logo">
+            <img class="logo" src="./photo.jpg">
+          </p>
+          <ul>
+            <li class="toctree-l1"><a class="reference internal" href="//github.com/pasuder">GitHub profile</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="clearer">
+      </div>
+    </div>
+
+    <!-- Javascript files -->
+    <script src="https://code.jquery.com/jquery-3.1.1.slim.min.js"
+            integrity="sha384-A7FZj7v+d/sdmMqp/nOQwliLvUsJfDHW+k9Omg/a/EheAdgtzNs3hpfag6Ed950n" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/tether/1.4.0/js/tether.min.js"
+            integrity="sha384-DztdAPBWPRXSA/3eYEEUWrWCy7G5KFbe8fFjk5JAIxUYHKkDx6Qin1DkWx51bBrb" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/js/bootstrap.min.js"
+            integrity="sha384-vBWWzlZJ8ea9aCX4pEW3rVHjgjt7zpkNpZk+02D9phzyeVkE+jo0ieGizqPLForn" crossorigin="anonymous"></script>
+
+    <!-- Global Site Tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-44869936-4"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments)};
+      gtag('js', new Date());
+      gtag('config', 'UA-44869936-4');
+    </script>
+
+  </body>
+
+</html>
